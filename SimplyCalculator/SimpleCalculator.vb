@@ -4,7 +4,6 @@
 'simple calculator
 '
 
-
 Option Explicit On
 Option Strict On
 Module SimpleCalculator
@@ -27,12 +26,17 @@ Module SimpleCalculator
         Dim A = CDec(firstNumber)
         Dim B = CDec(secondNumber)
 
-        If CInt(userResponse) = 1 Then
+        If userResponse = "1" Then
             result = A + B
-            Console.WriteLine($"{firstNumber} + {secondNumber} = {result}")
+            Console.WriteLine($"{A} + {B} = {result}")
             Console.ReadLine()
-
-
+        ElseIf userResponse = "2" Then
+            result = A * B
+            Console.WriteLine($" {A} * {B} = {result}")
+            Console.ReadLine()
+        Else
+            Console.WriteLine("That option is currently unavailable. please try again later")
+            Console.ReadLine()
         End If
 
     End Sub
