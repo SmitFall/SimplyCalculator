@@ -2,20 +2,24 @@
 'RCET0265
 'Spring 2022
 'simple calculator
-'
+'https://github.com/SmitFall/SimplyCalculator/tree/5c5e064fe6ea03d41f75c00e83d43644a98336fd
 
 Option Explicit On
 Option Strict On
 Module SimpleCalculator
 
     Sub Main()
+        'asigning values
         Dim userResponse As String
         Dim firstNumber As String
         Dim secondNumber As String
         Dim result As Decimal
+
+        'Choose operation
         Console.WriteLine("Please choose:
 1: sum 
 2: product")
+        'Type in numbers that you want to use
         userResponse = Console.ReadLine()
         Console.WriteLine("Please type in a number")
         firstNumber = Console.ReadLine()
@@ -23,6 +27,7 @@ Module SimpleCalculator
         Console.WriteLine("Please type in another number")
         secondNumber = Console.ReadLine()
 
+        'Converting so they can be used in the math
         Dim A = CDec(firstNumber)
         Dim B = CDec(secondNumber)
 
